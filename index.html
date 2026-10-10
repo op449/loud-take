@@ -1,519 +1,577 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Growth | Concrete Sales Infrastructure</title>
-    <link rel="stylesheet" href="styles.css?v=4">
+    <title>Loudtake — Ideas that don't scroll past.</title>
+    <meta name="description" content="Loudtake operates a turnkey creator distribution engine for early-stage and venture-backed tech startups. Human UGC testing scaled with generative AI.">
+    <link rel="stylesheet" href="styles.css?v=12">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo-black.png">
+    
+    <!-- DEFENSIVE SECURITY HEADERS -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
 </head>
+<body>
 
-<body class="dark-theme">
-
-    <div class="ambient-glow"></div>
-
-    <nav class="nexa-nav">
-        <div class="nav-container">
-            <a href="#" class="nav-brand">
-                <svg viewBox="0 0 24 24" width="24" height="24">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="2"
-                        fill="none" />
-                </svg>
-                <span>Quantum Growth</span>
+    <!-- NAVIGATION (SECTION 22) -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand" aria-label="Loudtake Home">
+                <span class="nav-brand-text">Loudtake</span>
             </a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#services">System</a>
-                <a href="#works">Packages</a>
-                <a href="contact.html">Contact</a>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#engine" class="nav-link">Process</a>
+                <a href="#case-study" class="nav-link">Results</a>
+                <a href="#founders" class="nav-link">For Founders</a>
             </div>
-            <a href="contact.html" class="btn-pill outline">Book a Call ↗</a>
+            <button class="nav-cta-btn open-modal-btn" type="button">Get Started</button>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- SECTION 01: HERO SECTION (SECTIONS 23, 24) -->
     <header class="hero-section">
-        <div class="aurora-bg"></div>
-        <div class="container text-center split-hero">
-            <div class="reveal-up" style="animation-delay: 0.1s;">
-                <span class="eyebrow">[ DIGITAL INFRASTRUCTURE ]</span>
-                <h1 class="hero-title">We Build "Hands-Free"<br>Sales Infrastructures.</h1>
-                <p class="hero-subtitle">
-                    Stop wasting money on shared HomeAdvisor leads. We add <strong style="color: #fff;">10-20
-                        high-ticket concrete jobs to your calendar
-                        every month</strong> with exclusive traffic and auto-conversion.
-                </p>
-                <div class="mt-8 flex justify-center gap-4" style="display: flex; gap: 16px; justify-content: center;">
-                    <a href="#services" class="btn-pill outline">View Our System ↘</a>
-                    <a href="contact.html" class="btn-pill primary">Claim Territory ↗</a>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <span class="eyebrow">CREATORS. IDEAS. DISTRIBUTION.</span>
+                    <h1 class="hero-headline">
+                        <span>Ideas that</span>
+                        <span>don’t scroll past.</span>
+                    </h1>
+                    <p class="hero-description">
+                        We run creator operations and short-form distribution for early-stage and venture-backed tech startups.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn-pill-dark open-modal-btn" type="button">GET STARTED →</button>
+                        <a href="#case-study" class="btn-link-editorial">SEE RESULTS</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="hero-collage mt-16 reveal-up" style="animation-delay: 0.3s;">
-                <div class="collage-item item-1">
-                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80"
-                        alt="Concrete Work">
-                </div>
-                <div class="collage-item item-2">
-                    <img src="avatar.png" alt="Digital Avatar"
-                        style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
-                </div>
-                <div class="collage-item item-3">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80"
-                        alt="Construction Flow">
+                <div class="hero-right">
+                    <div class="hero-artwork-wrap">
+                        <img src="hero-cards.png" alt="Loudtake Layered Creator Vertical Video Distribution" class="hero-artwork">
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- SECTION: ABOUT / PROBLEM -->
-    <section id="about" class="section-padding border-top relative">
-        <div class="container grid-layout about-grid">
-            <div class="col-left reveal-up">
-                <span class="eyebrow">[ THE PROBLEM ]</span>
+    <!-- HERO METRIC STRIP (SECTION 25) -->
+    <div class="metrics-strip">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-cell">
+                    <div class="metric-number">554K+</div>
+                    <div class="metric-label">ORGANIC VIEWS<br>IN 25 DAYS</div>
+                </div>
+                <div class="metric-cell">
+                    <div class="metric-number">$1.97</div>
+                    <div class="metric-label">BLENDED CPM<br>(80% BELOW MARKET)</div>
+                </div>
+                <div class="metric-cell">
+                    <div class="metric-number">501+</div>
+                    <div class="metric-label">HIGH-INTENT<br>BUYING COMMENTS</div>
+                </div>
+                <div class="metric-cell">
+                    <div class="metric-number">26</div>
+                    <div class="metric-label">ASSETS PUBLISHED<br>IN A SINGLE DAY</div>
+                </div>
             </div>
-            <div class="col-right reveal-up" style="transition-delay: 0.2s;">
-                <h3 class="hero-subtitle mb-6"
-                    style="color: var(--text-muted); font-size: 1.5rem; text-transform: none; letter-spacing: -0.01em; margin-left: 0; max-width: none;">
-                    People ask me, "What's the secret to booking out a concrete crew 3 months in advance?"
-                </h3>
-                <h2 class="huge-title mb-12" style="line-height: 1.1;">
-                    The answer is simple:<br>
-                    <span style="color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.7);">Fire your
-                        marketing agency.</span><br>
-                    They are scamming you.
+        </div>
+    </div>
+
+    <!-- SECTION 02: THE PROBLEM (SECTION 26) -->
+    <section id="about" class="dark-section problem-section">
+        <div class="container">
+            <div class="problem-layout">
+                <div>
+                    <span class="eyebrow">THE REALITY</span>
+                    <h2 class="problem-headline">
+                        Most startup content is invisible.
+                    </h2>
+                </div>
+                <div class="problem-body">
+                    <p class="problem-text">
+                        Founders understand their product with unmatched technical clarity. Creators understand human attention and internet culture.
+                    </p>
+                    <p class="problem-text">
+                        Most technology companies don’t have an operating system connecting the two. They default to stiff corporate announcements or unvetted freelance creators that burn capital without momentum.
+                    </p>
+                    <p class="problem-text">
+                        Loudtake builds that system. High-velocity experimentation designed to interrupt the feed and convert curiosity into pipeline.
+                    </p>
+                    <div class="problem-highlight">
+                        “Quiet visually, but loud conceptually. We engineer content people actually stop for.”
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 03: THE ENGINE (SECTION 27) -->
+    <section id="engine" class="engine-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">THE OPERATING MODEL</span>
+                <h2 class="section-headline">The Hybrid Distribution Engine.</h2>
+                <p class="section-subtext">
+                    Human creator → Test hook → Identify winner → Scale winner with AI → Distribute globally.
+                </p>
+            </div>
+
+            <div class="engine-flow">
+                <div class="engine-step">
+                    <div>
+                        <div class="step-meta">
+                            <span class="step-num">STAGE 01</span>
+                            <span class="step-tag">HUMAN</span>
+                        </div>
+                        <h3 class="step-title">Real creators test the hook.</h3>
+                        <p class="step-desc">
+                            We deploy 10–20 native creators to produce high-velocity short-form variations across TikTok, Reels, and Shorts. Every creator tests a different angle, hook, and framing against real consumer algorithms.
+                        </p>
+                    </div>
+                    <div class="step-footer-arrow">
+                        EXPLORE TESTING →
+                    </div>
+                </div>
+
+                <div class="engine-step">
+                    <div>
+                        <div class="step-meta">
+                            <span class="step-num">STAGE 02</span>
+                            <span class="step-tag">PROVE</span>
+                        </div>
+                        <h3 class="step-title">Performance identifies the winner.</h3>
+                        <p class="step-desc">
+                            We monitor algorithmic retention, 3-second hook rate, watch time drop-off, and high-intent buying comments in real-time. Only creative that achieves outlier organic efficiency advances to scale.
+                        </p>
+                    </div>
+                    <div class="step-footer-arrow">
+                        ANALYTICS AUDIT →
+                    </div>
+                </div>
+
+                <div class="engine-step">
+                    <div>
+                        <div class="step-meta">
+                            <span class="step-num">STAGE 03</span>
+                            <span class="step-tag">SCALE</span>
+                        </div>
+                        <h3 class="step-title">AI multiplies the winner globally.</h3>
+                        <p class="step-desc">
+                            We take the winning script and hook geometry, cloning proven concepts into photorealistic generative AI avatars across different demographic cohorts, localized accents, and international markets.
+                        </p>
+                    </div>
+                    <div class="step-footer-arrow">
+                        GLOBAL REACH →
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 04: CREATOR NETWORK (SECTION 28) -->
+    <section class="network-section">
+        <div class="container">
+            <div class="network-grid">
+                <div class="network-content">
+                    <span class="eyebrow">CREATOR OPERATIONS</span>
+                    <h2>10–20 creators.<br>One operating system.</h2>
+                    <p>
+                        Instead of managing fragmented freelancers, Loudtake deploys a dedicated, vetted creator fleet directly orchestrated through an agile Slack hub.
+                    </p>
+                    <p>
+                        Our operational layer handles creator recruitment, hook drafting, script coaching, compliance verification, and performance-driven incentives with zero founder review drag.
+                    </p>
+                    
+                    <div class="network-pillars">
+                        <div class="pillar-item">
+                            <h4>Two-Track Economics</h4>
+                            <p>Base asset fees paired with viral performance bonuses ensure creator alignment.</p>
+                        </div>
+                        <div class="pillar-item">
+                            <h4>24-Hour QA Turnaround</h4>
+                            <p>Scripts and footage are reviewed, graded, and formatted in dedicated Slack channels.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="network-card-preview">
+                    <div class="slack-preview-header">
+                        <span class="slack-channel-title"># loudtake-fleet-ops</span>
+                        <span style="font-size: 11px; color: #888; letter-spacing: 0.1em; font-weight: 600;">ACTIVE SPRINT</span>
+                    </div>
+                    <div class="slack-feed">
+                        <div class="slack-msg">
+                            <div class="slack-avatar-circle">CR</div>
+                            <div class="slack-msg-body">
+                                <div class="slack-user-name">Creator Fleet Lead <span style="font-weight: 400; color: #888; font-size: 11px;">10:24 AM</span></div>
+                                Hook variant B achieved 68% 3-sec retention on TikTok. Pushing batch #4 to production today.
+                                <div><span class="slack-tag-pill">26 Assets Published Today</span></div>
+                            </div>
+                        </div>
+
+                        <div class="slack-msg">
+                            <div class="slack-avatar-circle">QA</div>
+                            <div class="slack-msg-body">
+                                <div class="slack-user-name">Creative Direction <span style="font-weight: 400; color: #888; font-size: 11px;">10:38 AM</span></div>
+                                Cleaned pacing on cuts 3–6. Sound design and dynamic captions synced. Sent directly to distribution feed.
+                                <div><span class="slack-tag-pill">Approved · Zero Founder Hours</span></div>
+                            </div>
+                        </div>
+
+                        <div class="slack-msg">
+                            <div class="slack-avatar-circle">AI</div>
+                            <div class="slack-msg-body">
+                                <div class="slack-user-name">AI Multiplication Node <span style="font-weight: 400; color: #888; font-size: 11px;">11:15 AM</span></div>
+                                Winning hook mapped to 4 AI avatars (ES-LatAm, DE-DACH, US-Exec). 16 localized variants rendering.
+                                <div><span class="slack-tag-pill">Multiplication Active</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 05: AI SCALING (SECTION 29) -->
+    <section class="ai-section">
+        <div class="container">
+            <div class="ai-branching-grid">
+                <div>
+                    <span class="eyebrow">SYSTEMATIC MULTIPLICATION</span>
+                    <h2 class="editorial-serif" style="font-size: clamp(38px, 4.2vw, 64px); line-height: 1.05; margin-bottom: 24px;">
+                        Find the winner.<br>Then multiply it.
+                    </h2>
+                    <p style="font-size: 16.5px; line-height: 1.65; color: #4A4A46; margin-bottom: 24px;">
+                        Human creative testing removes the guesswork. Once an organic video generates statistical escape velocity, we don’t stop at one upload.
+                    </p>
+                    <p style="font-size: 16.5px; line-height: 1.65; color: #4A4A46;">
+                        Generative AI scales that verified premise across diverse audiences, localized languages, and target customer profiles—transforming one viral angle into 50+ modular distribution assets.
+                    </p>
+                </div>
+
+                <div class="ai-diagram-box">
+                    <div class="diagram-row-origin">
+                        <div class="origin-badge">ORIGIN ASSET · VERIFIED VIRAL HOOK</div>
+                        <div class="origin-title">1x Human Creator Proof of Concept</div>
+                        <div style="font-size: 13.5px; color: #666; margin-top: 6px;">3-Sec Retention: 68.4% · Blended CPM: $1.97 · 501+ Comments</div>
+                    </div>
+
+                    <div class="diagram-branches">
+                        <div class="branch-node">
+                            <div class="branch-label">AVATAR COHORT 01</div>
+                            <div class="branch-value">B2B SaaS Founder Persona</div>
+                            <div style="font-size: 12px; color: #666; margin-top: 4px;">US / UK Tech Hubs</div>
+                        </div>
+
+                        <div class="branch-node">
+                            <div class="branch-label">AVATAR COHORT 02</div>
+                            <div class="branch-value">Enterprise Executive Demographic</div>
+                            <div style="font-size: 12px; color: #666; margin-top: 4px;">LinkedIn & X Vertical Focus</div>
+                        </div>
+
+                        <div class="branch-node">
+                            <div class="branch-label">LOCALIZATION 03</div>
+                            <div class="branch-value">Spanish / LatAm Native Voice</div>
+                            <div style="font-size: 12px; color: #666; margin-top: 4px;">Mexico, Colombia, Spain</div>
+                        </div>
+
+                        <div class="branch-node">
+                            <div class="branch-label">LOCALIZATION 04</div>
+                            <div class="branch-value">German / DACH Translation</div>
+                            <div style="font-size: 12px; color: #666; margin-top: 4px;">Berlin, Munich, Zurich</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 06: CASE STUDY (SECTION 30) -->
+    <section id="case-study" class="dark-section case-study-section">
+        <div class="container">
+            <div class="case-study-header">
+                <span class="eyebrow">FLAGSHIP SPRINT · PROOF OF CONCEPT</span>
+                <h2 class="case-study-headline">
+                    554,000+ organic views.<br>25 days.
                 </h2>
-
-                <div style="border-left: 3px solid var(--accent-blue); padding-left: 32px; max-width: 650px;">
-                    <p class="text-body" style="font-size: 1.25rem; color: #fff; line-height: 1.7;">
-                        Most concrete operators have a fatal <strong>"Traffic without Conversion"</strong> problem. You
-                        pay $50 for a shared lead. They land on your slow, cluttered website.
-                    </p>
-                    <p class="text-body mt-4" style="font-size: 1.25rem; color: var(--text-muted); line-height: 1.7;">
-                        Then, while your hands are covered in cement, the homeowner calls someone else because you
-                        couldn't follow up instantly. <strong style="color: #fff;">They hire the other guy.</strong>
-                    </p>
-                    <p class="text-body mt-6" style="color: #fff; font-size: 1.1rem; font-weight: 500;">
-                        Our infrastructure solves this by adding <strong style="color: #39FF14;">10-20 high-ticket
-                            concrete jobs to your calendar every month</strong> on autopilot.
-                    </p>
-                    <a href="contact.html" class="btn-pill primary mt-8">Stop Losing Jobs ↗</a>
-                </div>
-
-                <div class="image-grid mt-16 reveal-up" style="transition-delay: 0.4s;">
-                    <img src="https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=600&q=80" alt="Work 1"
-                        class="rounded-image grayscale-hover">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="Work 2"
-                        class="rounded-image grayscale-hover">
-                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80" alt="Work 3"
-                        class="rounded-image grayscale-hover">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: SERVICES (THE 5-STAGE PIPELINE) -->
-    <section id="services" class="section-padding border-top relative">
-        <div class="container">
-            <div class="text-center mb-16 reveal-up">
-                <span class="eyebrow">[ OUR SYSTEM ]</span>
-                <h2 class="section-heading mt-4">The Complete Funnel Architecture</h2>
-                <p class="text-muted mt-2">Hover over any node in the structural map below to view the architecture.</p>
-            </div>
-
-            <!-- 5-STAGE INTERACTIVE FLOWCHART -->
-            <div class="fc-wrapper reveal-up" style="transition-delay: 0.2s;">
-                <div class="fc-content">
-
-                    <!-- STAGE 1: ONLINE PRESENCE -->
-                    <div class="fc-layer-label label-1">[ STAGE 1 — ONLINE PRESENCE ]</div>
-                    <div class="fc-row ">
-                        <div class="fc-box fc-standard box-slate interactive-box">
-                            <strong>Website Core</strong><span class="sub">High-Speed Conversions</span>
-                        </div>
-                        <div class="fc-box fc-standard box-slate interactive-box">
-                            <strong>Google Map Pack</strong><span class="sub">Local Dominance</span>
-                        </div>
-                        <div class="fc-box fc-standard box-slate interactive-box">
-                            <strong>Brand Trust</strong><span class="sub">Digital Aesthetics</span>
-                        </div>
-                    </div>
-
-                    <!-- Connectors down -->
-                    <div class="fc-arrow-container arrow-row">
-                        <div class="arr-standard">
-                            <div class="fc-arrow"></div>
-                        </div>
-                        <div class="arr-standard">
-                            <div class="fc-arrow"></div>
-                        </div>
-                        <div class="arr-standard">
-                            <div class="fc-arrow"></div>
-                        </div>
-                    </div>
-
-                    <!-- STAGE 2: CONTENT -->
-                    <div class="fc-layer-label label-2">[ STAGE 2 — CONTENT PROTOCOL ]</div>
-                    <div class="fc-row ">
-                        <div class="fc-box fc-standard box-purple interactive-box">
-                            <strong>Before/Afters</strong><span class="sub">Visual Evidence</span>
-                        </div>
-                        <div class="fc-box fc-standard box-purple interactive-box">
-                            <strong>Testimonials</strong><span class="sub">Client Endorsements</span>
-                        </div>
-                        <div class="fc-box fc-standard box-purple interactive-box">
-                            <strong>Educational Reels</strong><span class="sub">Pre-framing Leads</span>
-                        </div>
-                    </div>
-
-                    <div class="fc-arrow-container arrow-row">
-                        <!-- Funnel down into one central point implicitly via central arrow -->
-                        <div class="arr-standard" style="width: 100%;">
-                            <div class="fc-arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="fc-row justify-center ">
-                        <div class="fc-box fc-wide box-grey interactive-box">
-                            <strong>Omnipresent Authority Established</strong>
-                        </div>
-                    </div>
-
-                    <div class="fc-arrow-container arrow-row">
-                        <div class="arr-standard" style="width: 100%;">
-                            <div class="fc-arrow"></div>
-                        </div>
-                    </div>
-
-                    <!-- STAGE 3: ACQUISITIONS -->
-                    <div class="fc-layer-label label-3">[ STAGE 3 — ACQUISITIONS ]</div>
-                    <div class="fc-row ">
-                        <div class="fc-box fc-standard box-blue interactive-box">
-                            <strong>Google LSA</strong><span class="sub">Pay-per-booking</span>
-                        </div>
-                        <div class="fc-box fc-standard box-blue interactive-box">
-                            <strong>Meta Ads</strong><span class="sub">Retargeting Engine</span>
-                        </div>
-                        <div class="fc-box fc-standard box-blue interactive-box">
-                            <strong>Organic SEO</strong><span class="sub">Search Dominance</span>
-                        </div>
-                    </div>
-
-                    <div class="fc-arrow-container arrow-row">
-                        <div class="arr-standard">
-                            <div class="fc-arrow"></div>
-                        </div>
-                        <div class="arr-standard">
-                            <div class="fc-arrow"></div>
-                        </div>
-                        <div class="arr-standard">
-                            <div class="fc-arrow"></div>
-                        </div>
-                    </div>
-
-                    <!-- STAGE 4: CONVERSION -->
-                    <div class="fc-layer-label label-4">[ STAGE 4 — CONVERSION ]</div>
-                    <div class="fc-row ">
-                        <div class="fc-box fc-standard box-green interactive-box">
-                            <strong>AI SMS in 2-Min</strong><span class="sub">Speed to contact</span>
-                        </div>
-                        <div class="fc-box fc-standard box-green interactive-box">
-                            <strong>Auto Quotes</strong><span class="sub">Frictionless Flow</span>
-                        </div>
-                        <div class="fc-box fc-standard box-green interactive-box">
-                            <strong>AI Chatbot 24/7</strong><span class="sub">Always qualifying</span>
-                        </div>
-                    </div>
-
-                    <div class="fc-arrow-container arrow-row">
-                        <div class="arr-standard" style="width: 100%;">
-                            <div class="fc-arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="fc-row justify-center ">
-                        <div class="fc-box fc-wide box-darkgreen interactive-box">
-                            <strong>Job Secured & Deposit Paid</strong>
-                        </div>
-                    </div>
-
-                    <div class="fc-arrow-container arrow-row">
-                        <div class="arr-standard" style="width: 100%;">
-                            <div class="fc-arrow"></div>
-                        </div>
-                    </div>
-
-                    <!-- STAGE 5: CLOSING -->
-                    <div class="fc-layer-label label-5">[ STAGE 5 — CLOSING ]</div>
-                    <div class="fc-row ">
-                        <div class="fc-box fc-standard box-brown interactive-box">
-                            <strong>3-Touch Follow Up</strong><span class="sub">Never lose deals</span>
-                        </div>
-                        <div class="fc-box fc-standard box-brown interactive-box">
-                            <strong>Auto Review Ask</strong><span class="sub">48hrs post-job</span>
-                        </div>
-                        <div class="fc-box fc-standard box-brown interactive-box">
-                            <strong>Seasonal Boosts</strong><span class="sub">Database Reactivation</span>
-                        </div>
-                    </div>
-
-                    <div class="fc-arrow-container arrow-row">
-                        <div class="arr-standard" style="width: 100%;">
-                            <div class="fc-arrow"></div>
-                        </div>
-                    </div>
-
-                    <!-- Final Result -->
-                    <div class="fc-row justify-center  mt-4">
-                        <div class="fc-box fc-wide box-brightgreen interactive-box pb-20"
-                            style="height: auto; padding: 24px;">
-                            <strong>10–20 Additional Jobs/Month</strong>
-                            <span class="sub">Entire Ecosystem Running Synchronously</span>
-                        </div>
-                    </div>
-
-                    <!-- The Dashed Loop -->
-                    <div class="fc-loop-container">
-                        <span class="loop-text">Lifecycle<br>Loop</span>
-                        <svg class="loop-svg-layer">
-                            <!-- Draw lines starting from bottom (Stage 5) up to Content stage -->
-                            <path d="M 0,840 L 120,840 L 120,195 L 0,195" />
-                            <!-- Arrowhead pointing left into Stage 2 content -->
-                            <polygon points="0,195 8,189 8,201" />
-                        </svg>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECTION: WORKS (THE OFFER) -->
-    <section id="works" class="section-padding border-top">
-        <div class="container">
-            <div class="text-center mb-16 reveal-up">
-                <span class="eyebrow">[ TWO WAYS TO GROW ]</span>
-                <h2 class="section-heading mt-4">Work That Drives Growth</h2>
-                <p class="text-muted mt-2">A deep dive into the exact packages we deploy to scale you to <strong
-                        style="color: #fff;">10-20 high-ticket jobs every month.</strong></p>
-            </div>
-
-            <div class="works-grid reveal-up" style="transition-delay: 0.2s;">
-                <!-- Offer 1 -->
-                <div class="work-card standard-tier">
-                    <div class="card-header">
-                        <div class="card-badge">Foundational</div>
-                        <h3>The Growth Hub</h3>
-                        <p>A lightning-fast digital storefront designed purely to turn visitors into booked quotes.
-                            Absolutely zero fluff.</p>
-                    </div>
-
-                    <div class="card-body">
-                        <ul class="features detailed-list">
-                            <li><strong>Custom Conversions Hub</strong> 5-page SEO-optimized website built for speed.
-                            </li>
-                            <li><strong>Mobile-First Architecture</strong> Over 70% browse on phones. One-tap call
-                                functionality.</li>
-                            <li><strong>Lead Form Automations</strong> Instantly fires a notification directly to your
-                                phone/email.</li>
-                            <li><strong>Local SEO Foundation</strong> On-page setup ensuring Google ranks your services.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="contact.html" class="btn-pill outline w-full" style="justify-content: center;">Build
-                            the Foundation ↗</a>
-                    </div>
-                </div>
-
-                <!-- Offer 2 -->
-                <div class="work-card pro-tier">
-                    <div class="card-glow"></div>
-                    <div class="card-header">
-                        <div class="card-badge highlight-badge">Ultimate Scaling</div>
-                        <h3>Complete Infrastructure</h3>
-                        <p>The entire, end-to-end lead-generation ecosystem. Designed for pro operators who demand
-                            volume.</p>
-                    </div>
-
-                    <div class="card-body">
-                        <ul class="features detailed-list highlight">
-                            <li><strong>Everything in the Hub Package</strong> High-converting core foundation included.
-                            </li>
-                            <li><strong>Local Traffic Dominion</strong> Rapid scaling to <strong
-                                    style="color: #fff;">10-20 jobs/month</strong> via Google & Meta.</li>
-                            <li><strong>2-Minute AI Follow-up</strong> Proprietary SMS AI closes leads before you call.
-                            </li>
-                            <li><strong>GoHighLevel Custom CRM</strong> Complete pipeline visualization installed for
-                                you.</li>
-                            <li><strong>Compound Retention</strong> Auto-review asks + seasonal reactivation texts.</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="contact.html" class="btn-pill primary w-full"
-                            style="justify-content: center; background: #0055ff; color: #fff; border: 1px solid #0055ff;">Deploy
-                            the System ↗</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECTION: REELS CAROUSEL -->
-    <section class="section-padding border-top relative" style="overflow: hidden;">
-        <div class="container text-center mb-12 reveal-up">
-            <span class="eyebrow">[ THE CONTENT ENGINE ]</span>
-            <h2 class="section-heading mt-4">Our Socials</h2>
-            <p class="text-muted mt-2">Follow our daily insights and system breakdowns.</p>
-        </div>
-
-        <div class="carousel-container reveal-up" style="transition-delay: 0.2s;">
-            <div class="carousel-track"
-                style="justify-content: center; width: 100%; display: flex; gap: 32px; flex-wrap: wrap;">
-                <!-- Reel 1 -->
-                <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transition: transform 0.4s; cursor: pointer;"
-                    onmouseover="this.style.transform='translateY(-10px)'"
-                    onmouseout="this.style.transform='translateY(0)'">
-                    <iframe
-                        src="https://www.facebook.com/plugins/video.php?height=624&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F892103647139862%2F&show_text=false&width=350&t=0"
-                        width="350" height="624" style="border:none;overflow:hidden; display: block;" scrolling="no"
-                        frameborder="0" allowfullscreen="true"
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                </div>
-                <!-- Reel 2 -->
-                <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transition: transform 0.4s; cursor: pointer;"
-                    onmouseover="this.style.transform='translateY(-10px)'"
-                    onmouseout="this.style.transform='translateY(0)'">
-                    <iframe
-                        src="https://www.facebook.com/plugins/video.php?height=624&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1279221764302995%2F&show_text=false&width=350&t=0"
-                        width="350" height="624" style="border:none;overflow:hidden; display: block;" scrolling="no"
-                        frameborder="0" allowfullscreen="true"
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: THE TEAM -->
-    <section class="section-padding border-top relative" id="team">
-        <div class="container">
-            <div class="text-center mb-16 reveal-up">
-                <span class="eyebrow">[ THE ARCHITECTS ]</span>
-                <h2 class="section-heading mt-4">Built by Operators. Scaled by Machines.</h2>
-            </div>
-
-            <div class="reveal-up" style="transition-delay: 0.2s; width: 100%;">
-                <div class="team-grid">
-                    <!-- Founder -->
-                    <div class="team-card text-center"
-                        style="background: #0a0a0a; padding: 40px; border-radius: 20px; border: 1px solid #1a1a1a;">
-                        <img src="varad.jpg" alt="Varad Suryawanshi" class="rounded-image"
-                            style="height: auto; max-height: 550px; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 12px; margin-bottom: 24px; width: 100%; transition: transform 0.4s;">
-                        <h3 style="font-size: 1.8rem; font-weight: 500; color: #fff;">Varad Suryawanshi</h3>
-                        <p class="text-muted"
-                            style="font-size: 0.95rem; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 8px;">
-                            Founder & Engine Builder</p>
-                    </div>
-                    <!-- Digital Avatar -->
-                    <div class="team-card text-center"
-                        style="background: #0a0a0a; padding: 40px; border-radius: 20px; border: 1px solid #1a1a1a;">
-                        <img src="avatar.png" alt="Chad Johnson" class="rounded-image"
-                            style="height: auto; max-height: 550px; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 12px; margin-bottom: 24px; width: 100%; transition: transform 0.4s;">
-                        <h3 style="font-size: 1.8rem; font-weight: 500; color: #fff;">Chad Johnson</h3>
-                        <p class="text-muted"
-                            style="font-size: 0.95rem; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 8px;">
-                            Digital Avatar / Sales AI</p>
-                        <a href="https://www.facebook.com/jonson1chad/" target="_blank" class="btn-pill outline mt-6"
-                            style="display: inline-block; padding: 10px 24px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); color: #fff; text-decoration: none; transition: all 0.3s; font-size: 0.9rem; letter-spacing: 0.02em;">Connect
-                            on Facebook ↗</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BOTTOM CTA -->
-    <section class="bottom-cta border-top">
-        <div class="aurora-bg"></div>
-        <div class="container cta-container">
-            <div class="cta-left reveal-up">
-                <span class="eyebrow">[ CLAIM YOUR TERRITORY ]</span>
-                <h2 class="huge-title mt-4">You Own Everything.<br>No Hostages.</h2>
-                <p class="text-body mt-6 max-w-lg">
-                    Ad accounts, website, CRM data, contact list—all yours forever. We build the engine that secures
-                    <strong style="color: #fff;">10-20 high-ticket concrete jobs to your calendar every month.</strong>
-                    No lock-in contracts. 3-month build,
-                    then month-to-month.
-                </p>
-                <a href="contact.html" class="btn-pill primary mt-8">Secure Your City ↗</a>
-            </div>
-
-            <div class="cta-right reveal-up" style="transition-delay: 0.2s;">
-                <div class="contact-card">
-                    <h4>Have a project in mind?</h4>
-                    <div class="avatar-block mt-4">
-                        <img src="avatar.png" alt="Partner" class="avatar-sm">
-                        <div class="avatar-text">
-                            <strong>Quantum Growth</strong>
-                            <span class="text-sm">Growth Partner</span>
-                            <span class="text-xs mt-1" style="opacity: 0.7;">
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" style="display:inline; margin-right:4px;">
-                                    <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                    <polyline points="22,6 12,13 2,6" />
-                                </svg>
-                                sdsurya7276@gmail.com
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <!-- BIG FOOTER -->
-    <footer class="big-footer">
-        <div class="container footer-top">
-            <div class="brand-info">
-                <div class="nav-brand mb-4">
-                    <svg viewBox="0 0 24 24" width="24" height="24">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="2"
-                            fill="none" />
-                    </svg>
-                    <span>Quantum Growth</span>
-                </div>
-                <p class="text-sm text-muted max-w-xs">Strategy-led sales infrastructure building experiences that drive
-                    concrete jobs.</p>
-                <p class="text-sm text-muted mt-8">&copy; <span id="year"></span> Quantum Growth. All rights reserved.
+                <p class="case-study-sub">
+                    Directly from our verified campaign tracking dashboard for Alomana AI. Measured against real audience demand, retention, and paid media benchmarks.
                 </p>
             </div>
 
-            <div class="footer-links">
-                <div class="link-col">
-                    <a href="#about">About</a>
-                    <a href="#services">System</a>
+            <!-- DASHBOARD SCREENSHOT CARD -->
+            <div class="case-study-card">
+                <div class="case-study-screenshot-wrap">
+                    <img src="sideshift-dashboard.png" alt="SideShift Verified Analytics Dashboard" class="case-study-screenshot">
+                    <div class="audit-badge">
+                        <span class="audit-dot"></span> LIVE SIDESHIFT AUDIT TRAIL
+                    </div>
                 </div>
-                <div class="link-col">
-                    <a href="#works">Packages</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="link-col">
-                    <a href="https://www.facebook.com/jonson1chad/" target="_blank">Facebook</a>
+
+                <div class="case-study-metrics-grid">
+                    <div class="cs-metric-cell">
+                        <div class="cs-metric-num">$1.97</div>
+                        <div class="cs-metric-label">BLENDED CPM<br>80% BELOW $10-$14 META ADS</div>
+                    </div>
+
+                    <div class="cs-metric-cell">
+                        <div class="cs-metric-num">501+</div>
+                        <div class="cs-metric-label">BUYING COMMENTS<br>HIGH-INTENT PROSPECTS</div>
+                    </div>
+
+                    <div class="cs-metric-cell">
+                        <div class="cs-metric-num">5.1x</div>
+                        <div class="cs-metric-label">PAID MEDIA MULTIPLIER<br>$5,501 VALUE ON $1,081 SPEND</div>
+                    </div>
+
+                    <div class="cs-metric-cell">
+                        <div class="cs-metric-num">0 Hrs</div>
+                        <div class="cs-metric-label">FOUNDER REVIEW HOURS<br>TURNKEY SLACK MANAGEMENT</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom text-center">
-            <h1 class="giant-text">QUANTUM GROWTH</h1>
+    </section>
+
+    <!-- SECTION 07: THE DIFFERENCE (SECTION 31) -->
+    <section class="difference-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">METHODOLOGY</span>
+                <h2 class="section-headline">Not another content agency.</h2>
+                <p class="section-subtext">
+                    A purpose-built distribution engine engineered specifically for the speed and capital constraints of early-stage venture backings.
+                </p>
+            </div>
+
+            <div class="difference-table">
+                <div class="diff-column">
+                    <div class="diff-col-header">
+                        <div class="diff-col-eyebrow">THE OLD WAY</div>
+                        <h3 class="diff-col-title">Traditional Agency</h3>
+                    </div>
+                    <div class="diff-items-list">
+                        <div>
+                            <div class="diff-item-title">Slow Production</div>
+                            <div class="diff-item-desc">3 to 4 weeks to produce initial creative batches with endless script drafts.</div>
+                        </div>
+                        <div>
+                            <div class="diff-item-title">Founder Approvals</div>
+                            <div class="diff-item-desc">Requires hours of founder time reviewing every line, cut, and creative angle.</div>
+                        </div>
+                        <div>
+                            <div class="diff-item-title">Small Creator Pools</div>
+                            <div class="diff-item-desc">Relying on 1 or 2 freelancers who burn out or lack algorithmic range.</div>
+                        </div>
+                        <div>
+                            <div class="diff-item-title">One Market</div>
+                            <div class="diff-item-desc">Single-demographic creative that fails to capture global tech adoption.</div>
+                        </div>
+                        <div>
+                            <div class="diff-item-title">Content-First</div>
+                            <div class="diff-item-desc">Optimizing for pretty aesthetic posts rather than commercial pipeline.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="diff-column">
+                    <div class="diff-col-header">
+                        <div class="diff-col-eyebrow">THE LOUDTAKE SYSTEM</div>
+                        <h3 class="diff-col-title">Loudtake</h3>
+                    </div>
+                    <div class="diff-items-list">
+                        <div>
+                            <div class="diff-item-title">Rapid Testing</div>
+                            <div class="diff-item-desc">24–48 hour iteration sprints deploying tens of hooks into live feeds.</div>
+                        </div>
+                        <div>
+                            <div class="diff-item-title">Zero Founder Review Hours</div>
+                            <div class="diff-item-desc">Decentralized Slack operations handle scripting, vetting, QA, and payouts.</div>
+                        </div>
+                        <div>
+                            <div class="diff-item-title">Creator Fleet</div>
+                            <div class="diff-item-desc">A vetted fleet of 10–20+ native creators competing on performance.</div>
+                        </div>
+                        <div>
+                            <div class="diff-item-title">Global Distribution</div>
+                            <div class="diff-item-desc">AI multiplication across multiple languages, accents, and territories.</div>
+                        </div>
+                        <div>
+                            <div class="diff-item-title">Performance-First</div>
+                            <div class="diff-item-desc">Engineered for CPM efficiency ($1.97), high-intent comments, and conversion.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 08: FOR FOUNDERS (SECTION 32) -->
+    <section id="founders" class="founders-section">
+        <div class="container">
+            <div class="founders-layout">
+                <div>
+                    <span class="eyebrow">BUILT FOR BUILDERS</span>
+                    <h2 class="founders-headline">
+                        You build the product.<br>We build the attention.
+                    </h2>
+                    <p class="founders-desc">
+                        Technical founders shouldn't have to spend 30 hours a week chasing freelance creators, editing video scripts, or analyzing TikTok retention curves.
+                    </p>
+                    <p class="founders-desc">
+                        Loudtake integrates seamlessly as your dedicated distribution layer. We take your core value proposition and translate it into dozens of high-velocity organic assets every month.
+                    </p>
+                    <button class="btn-pill-dark open-modal-btn" type="button">BUILD YOUR ENGINE →</button>
+                </div>
+
+                <div class="founders-cta-box">
+                    <h3>Deploy Your First Sprint</h3>
+                    <p>
+                        We limit client intake to 3 startups per cohort to maintain creator fleet focus and high distribution velocity.
+                    </p>
+                    <div style="border-top: 1px solid var(--border-light); padding-top: 20px; margin-top: 20px;">
+                        <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 8px;">WHAT TO EXPECT</div>
+                        <div style="font-size: 13.5px; line-height: 1.6; color: #333;">
+                            • Turnkey Slack integration within 48h<br>
+                            • 10–20 Creator Fleet deployment<br>
+                            • Verified SideShift performance reporting<br>
+                            • 100% turnkey: 0 founder hours required
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 09: FINAL CTA (SECTION 33) -->
+    <section class="dark-section final-cta-section">
+        <div class="container">
+            <span class="eyebrow">MAKE AN IMPACT</span>
+            <h2 class="final-cta-headline">
+                Make something worth stopping for.
+            </h2>
+            <p class="final-cta-subtext">
+                Loudtake builds creator-led distribution systems for ambitious technology companies.
+            </p>
+            <button class="btn-pill-light open-modal-btn" type="button">GET STARTED →</button>
+        </div>
+    </section>
+
+    <!-- SECTION 10: MINIMAL FOOTER (SECTION 34) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand-wrap">
+                    <img src="logo-white.png" alt="Loudtake" class="footer-logo-img">
+                    <div class="footer-tagline">Creators. Ideas. Distribution.</div>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#engine" class="footer-link">Process</a>
+                    <a href="#case-study" class="footer-link">Results</a>
+                    <a href="#founders" class="footer-link">For Founders</a>
+                    <a href="mailto:hello@loudtake.com" class="footer-link">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 LOUDTAKE. ALL RIGHTS RESERVED.</div>
+                <div>BUILT FOR VENTURE-BACKED TECH.</div>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js?v=3"></script>
-</body>
+    <!-- INTERACTIVE CONTACT MODAL -->
+    <div id="contactModal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-card">
+            <button class="modal-close-btn" type="button" aria-label="Close Modal">✕</button>
+            <span class="eyebrow">SPRINT INTAKE</span>
+            <h3 class="modal-headline">Deploy your creator engine.</h3>
+            <p class="modal-subtext">
+                Fill in your details below and our operations lead will review your product and respond within 12 hours.
+            </p>
 
+            <form class="modal-form" id="intakeForm" onsubmit="event.preventDefault(); handleFormSubmit();">
+                <div class="form-group">
+                    <label class="form-label" for="userName">Founder / Lead Name</label>
+                    <input type="text" id="userName" class="form-input" placeholder="e.g. Alex Vance" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="userEmail">Work Email</label>
+                    <input type="email" id="userEmail" class="form-input" placeholder="alex@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="companyUrl">Company Website / App Link</label>
+                    <input type="url" id="companyUrl" class="form-input" placeholder="https://yourstartup.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="userGoal">Current Distribution Goal</label>
+                    <input type="text" id="userGoal" class="form-input" placeholder="e.g. Scaling organic installs, launching beta, lower CAC">
+                </div>
+                <button type="submit" class="btn-pill-dark" style="width: 100%; justify-content: center; margin-top: 10px;">
+                    REQUEST SPRINT INTAKE →
+                </button>
+                <div id="formSuccessNotice" style="display: none; color: #10B981; font-size: 13px; text-align: center; margin-top: 8px; font-weight: 500;">
+                    ✓ Request received. We'll be in touch shortly.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- SIMPLE SCRIPT FOR INTERACTION -->
+    <script>
+        const modal = document.getElementById('contactModal');
+        const openBtns = document.querySelectorAll('.open-modal-btn');
+        const closeBtn = document.querySelector('.modal-close-btn');
+
+        openBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
+            }
+        });
+
+        function handleFormSubmit() {
+            const urlInput = document.getElementById('companyUrl');
+            const cleanUrl = urlInput.value.trim();
+            if (!cleanUrl.startsWith('http://') && !cleanUrl.startsWith('https://')) {
+                alert('Please enter a valid website URL starting with https://');
+                return;
+            }
+            const notice = document.getElementById('formSuccessNotice');
+            notice.style.display = 'block';
+            setTimeout(() => {
+                modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
+                notice.style.display = 'none';
+                document.getElementById('intakeForm').reset();
+            }, 2000);
+        }
+    </script>
+</body>
 </html>
