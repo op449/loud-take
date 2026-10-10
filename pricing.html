@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans — Loud Take</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Transparent monthly volume plans for creator distribution on TikTok, Reels and Shorts.">
+    <link rel="stylesheet" href="styles.css?v=20">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo-black.png">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand" aria-label="Loud Take Home">
+                <span class="nav-brand-text">Loud Take</span>
+            </a>
+            <div class="nav-menu">
+                <a href="index.html#case-study" class="nav-link">Results</a>
+                <a href="index.html#how-it-works" class="nav-link">How it works</a>
+                <a href="pricing.html" class="nav-link active">Pricing</a>
+                <a href="index.html#faq" class="nav-link">FAQ</a>
+            </div>
+            <button class="nav-cta-btn btn-book-call" type="button">Book a call</button>
+        </div>
+    </nav>
+
+    <!-- PRICING GATE (Initial View for new visitors) -->
+    <section id="pricingGateSection" class="pricing-gate-section">
+        <div class="container container-narrow">
+            <div class="gate-card">
+                <span class="eyebrow text-center" style="display:block; margin-bottom: 12px;">TRANSPARENT PLANS</span>
+                <h1 class="gate-headline text-center">See our plans.</h1>
+                <p class="gate-subtext text-center">
+                    Tell us who you are and the pricing opens right away. We will follow up with a content plan for your app.
+                </p>
+
+                <form id="pricingLeadForm" class="gate-form">
+                    <div class="form-group">
+                        <label for="leadCompany" class="form-label">Company / App Name</label>
+                        <input type="text" id="leadCompany" class="form-input" placeholder="e.g. Acme App" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="leadEmail" class="form-label">Work Email</label>
+                        <input type="email" id="leadEmail" class="form-input" placeholder="you@acmeapp.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="leadPhone" class="form-label">Phone Number</label>
+                        <input type="tel" id="leadPhone" class="form-input" placeholder="+1 (555) 000-0000" required>
+                        <div id="phoneError" style="display: none; color: #DC2626; font-size: 12.5px; margin-top: 6px;">
+                            Please enter a valid phone number with area code.
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-pill-dark" style="width: 100%; justify-content: center; margin-top: 14px; padding: 15px 24px;">
+                        Unlock Pricing Instantly →
+                    </button>
+                    <div class="gate-footer-note text-center">
+                        🔒 No spam. Instant access. We will email a tailored content plan for your app.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNLOCKED PRICING (Shown once visitor fills form or if stored in localStorage) -->
+    <section id="pricingUnlockedSection" class="pricing-unlocked-section" style="display: none;">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="eyebrow">MONTH-TO-MONTH PLANS</span>
+                <h1 class="section-headline">Pick a monthly volume.</h1>
+                <p class="section-subtext" style="max-width: 680px; margin: 0 auto;">
+                    Strategy, creators, management and reporting are included in every plan. No setup fee. Plan on about 30 days to start and warm up.
+                </p>
+            </div>
+
+            <!-- PRICING TIERS GRID -->
+            <div class="pricing-cards-grid">
+                
+                <!-- PLAN 1: 30 VIDEOS -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <div class="plan-volume">30 videos / mo</div>
+                        <div class="plan-price">$3,167<span class="plan-per"> / month</span></div>
+                        <div class="plan-per-video">~$106 / video</div>
+                    </div>
+
+                    <div class="plan-features">
+                        <div class="plan-feature-item">✓ US creators fully managed</div>
+                        <div class="plan-feature-item">✓ Brand and content strategy</div>
+                        <div class="plan-feature-item">✓ Daily posting & scheduling</div>
+                        <div class="plan-feature-item">✓ Monthly performance reporting</div>
+                        <div class="plan-feature-item">✓ Hook & format iteration</div>
+                    </div>
+
+                    <button class="btn-pill-dark btn-book-call plan-cta" type="button">Book a call</button>
+                </div>
+
+                <!-- PLAN 2: 60 VIDEOS (MOST POPULAR) -->
+                <div class="pricing-card card-popular">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="plan-header">
+                        <div class="plan-volume">60 videos / mo</div>
+                        <div class="plan-price">$4,667<span class="plan-per"> / month</span></div>
+                        <div class="plan-per-video">~$78 / video</div>
+                    </div>
+
+                    <div class="plan-features">
+                        <div class="plan-feature-item">✓ US creators fully managed</div>
+                        <div class="plan-feature-item">✓ Brand and content strategy</div>
+                        <div class="plan-feature-item">✓ Daily posting & scheduling</div>
+                        <div class="plan-feature-item">✓ Monthly performance reporting</div>
+                        <div class="plan-feature-item">✓ AI avatar winner multiplication</div>
+                        <div class="plan-feature-item">✓ Accelerated algorithm testing</div>
+                    </div>
+
+                    <button class="btn-pill-dark btn-book-call plan-cta" type="button">Book a call</button>
+                </div>
+
+                <!-- PLAN 3: 120 VIDEOS -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <div class="plan-volume">120 videos / mo</div>
+                        <div class="plan-price">$7,667<span class="plan-per"> / month</span></div>
+                        <div class="plan-per-video">~$64 / video</div>
+                    </div>
+
+                    <div class="plan-features">
+                        <div class="plan-feature-item">✓ US creators fully managed</div>
+                        <div class="plan-feature-item">✓ Brand and content strategy</div>
+                        <div class="plan-feature-item">✓ High-volume multi-account deployment</div>
+                        <div class="plan-feature-item">✓ Comprehensive weekly & monthly reporting</div>
+                        <div class="plan-feature-item">✓ Dedicated creator fleet ops manager</div>
+                        <div class="plan-feature-item">✓ Full AI avatar multiplication</div>
+                    </div>
+
+                    <button class="btn-pill-dark btn-book-call plan-cta" type="button">Book a call</button>
+                </div>
+
+                <!-- PLAN 4: CUSTOM -->
+                <div class="pricing-card card-custom">
+                    <div class="plan-header">
+                        <div class="plan-volume">Custom Volume</div>
+                        <div class="plan-price">Custom</div>
+                        <div class="plan-per-video">Your volume — tell us the target, we size it.</div>
+                    </div>
+
+                    <div class="plan-features">
+                        <div class="plan-feature-item">✓ Custom creator fleet sizing</div>
+                        <div class="plan-feature-item">✓ US creators fully managed</div>
+                        <div class="plan-feature-item">✓ Brand and content strategy</div>
+                        <div class="plan-feature-item">✓ Custom platform distribution (TikTok, Reels, Shorts)</div>
+                        <div class="plan-feature-item">✓ Custom analytics & weekly sprint syncs</div>
+                    </div>
+
+                    <button class="btn-pill-outline btn-book-call plan-cta" type="button">Book a call</button>
+                </div>
+
+            </div>
+
+            <!-- IMPORTANT PLAN DETAILS & ADD-ONS -->
+            <div class="pricing-addons-wrap">
+                <div class="addon-box">
+                    <div class="addon-title">Performance Bonuses on Top</div>
+                    <div class="addon-desc">
+                        Creators earn view-milestone bonuses scaled to volume. These bonuses are only paid if the campaign month hits the target view tier.
+                    </div>
+                </div>
+
+                <div class="addon-box">
+                    <div class="addon-title">Paid Ads (Optional)</div>
+                    <div class="addon-desc">
+                        $379/mo management. Run Spark Ads and whitelisted creator ads on top of organic winners. Ad spend goes straight to the advertising platform with zero markup.
+                    </div>
+                </div>
+
+                <div class="addon-box">
+                    <div class="addon-title">Month to Month</div>
+                    <div class="addon-desc">
+                        Zero long-term lock-ins. No setup fees. Stay because the views and installs compound, not because of a legal contract.
+                    </div>
+                </div>
+            </div>
+
+            <!-- UNLOCKED CTA BANNER -->
+            <div class="pricing-bottom-cta text-center">
+                <h3 class="editorial-serif" style="font-size: 38px; margin-bottom: 12px;">Ready to build your content plan?</h3>
+                <p style="color: var(--text-muted-dark); margin-bottom: 24px;">Book a 30-minute intro call. We'll show you the exact creator angles we'd deploy for your app.</p>
+                <button class="btn-pill-dark btn-book-call" type="button">Book a call</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="nav-brand-text">Loud Take</div>
+                    <div class="footer-tagline">Creator distribution for consumer apps.</div>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#case-study" class="footer-link">Results</a>
+                    <a href="index.html#how-it-works" class="footer-link">How it works</a>
+                    <a href="pricing.html" class="footer-link">Pricing</a>
+                    <a href="index.html#faq" class="footer-link">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 Loud Take. All rights reserved.</div>
+                <div>Month-to-month · No setup fee · US creators</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE BOOK A CALL BAR -->
+    <div class="mobile-sticky-bar">
+        <button class="btn-pill-dark btn-book-call mobile-sticky-btn" type="button">
+            Book a call →
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
