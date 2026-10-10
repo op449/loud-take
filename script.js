@@ -1,94 +1,152 @@
-// Initialize Lenis Smooth Scrolling
-const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    direction: 'vertical',
-    gestureDirection: 'vertical',
-    smooth: true,
-    mouseMultiplier: 1,
-    smoothTouch: false,
-    touchMultiplier: 2,
-    infinite: false,
-})
-
-function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
-
 // ==========================================
-// SCROLL REVEAL (INTERSECTION OBSERVER)
+// LOUDTAKE — CONVERSION REBUILD ENGINE
 // ==========================================
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-};
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target); // Only animate once
-        }
-    });
-}, observerOptions);
+// 1. Single Booking URL Constant
+// Cal.com placeholder link used across all "Book a call" buttons
+const BOOK_URL = 'https://cal.com/loudtake/30min';
 
-document.querySelectorAll('.reveal-up').forEach((el) => {
-    observer.observe(el);
-});
-
-// ==========================================
-// MOUSE TRACKING GLOW EFFECTS
-// ==========================================
-// 1. Ambient Background Glow
-const ambientGlow = document.querySelector('.ambient-glow');
-
-// 2. Package Cards Spotlight Glow
-const workCards = document.querySelectorAll('.work-card');
-
-document.addEventListener('mousemove', (e) => {
-    // Move global ambient glow if it exists
-    if (ambientGlow) {
-        ambientGlow.style.left = e.clientX + 'px';
-        ambientGlow.style.top = e.clientY + 'px';
-    }
-
-    // Update CSS variables for each package card to track relative mouse position
-    workCards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        card.style.setProperty('--mouse-x', `${x}px`);
-        card.style.setProperty('--mouse-y', `${y}px`);
-    });
-});
-
-// Smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = this.getAttribute('href');
-        lenis.scrollTo(target, {
-            offset: -80, // offset
-            duration: 1.2
+// 2. Attach Booking Link to all CTA buttons
+function initBookingButtons() {
+    const bookButtons = document.querySelectorAll('[data-book-call], .btn-book-call, .book-cta');
+    bookButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open(BOOK_URL, '_blank', 'noopener,noreferrer');
         });
     });
-});
+}
 
-// Set current year in footer
-const yearEl = document.getElementById('year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+// 3. FAQ Accordion Logic (Single open or toggle)
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (!faqItems.length) return;
 
-// Simple accordion class toggle for services (Desktop hover logic / Mobile click)
-const serviceRows = document.querySelectorAll('.service-row');
-serviceRows.forEach(row => {
-    row.addEventListener('mouseenter', () => {
-        serviceRows.forEach(r => r.classList.remove('active'));
-        row.classList.add('active');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (!question) return;
 
-        // In a real scenario, you'd change the adjacent image based on the row hovered.
-        // For now, it just toggles the active styling class.
+        question.addEventListener('click', () => {
+            const isOpen = item.classList.contains('active');
+            
+            // Close other items
+            faqItems.forEach(other => {
+                if (other !== item) {
+                    other.classList.remove('active');
+                    const ans = other.querySelector('.faq-answer');
+                    if (ans) ans.style.maxHeight = null;
+                }
+            });
+
+            // Toggle current
+            if (isOpen) {
+                item.classList.remove('active');
+                const answer = item.querySelector('.faq-answer');
+                if (answer) answer.style.maxHeight = null;
+            } else {
+                item.classList.add('active');
+                const answer = item.querySelector('.faq-answer');
+                if (answer) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            }
+        });
     });
+}
+
+// 4. Smooth Anchor Scrolling
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#' || targetId === '') return;
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+                e.preventDefault();
+                targetEl.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+// 5. Pricing Gating & FormSubmit Integration
+const PRICING_STORAGE_KEY = 'loudtake_pricing_unlocked';
+
+function initPricingGate() {
+    const gateSection = document.getElementById('pricingGateSection');
+    const unlockedSection = document.getElementById('pricingUnlockedSection');
+    const leadForm = document.getElementById('pricingLeadForm');
+
+    if (!gateSection || !unlockedSection) return;
+
+    // Check if visitor has already unlocked pricing
+    const isUnlocked = localStorage.getItem(PRICING_STORAGE_KEY) === 'true';
+
+    if (isUnlocked) {
+        gateSection.style.display = 'none';
+        unlockedSection.style.display = 'block';
+        return;
+    }
+
+    if (leadForm) {
+        leadForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const companyInput = document.getElementById('leadCompany');
+            const emailInput = document.getElementById('leadEmail');
+            const phoneInput = document.getElementById('leadPhone');
+
+            const company = companyInput ? companyInput.value.trim() : '';
+            const email = emailInput ? emailInput.value.trim() : '';
+            const phone = phoneInput ? phoneInput.value.trim() : '';
+
+            // Basic client-side phone validation (at least 7 digits)
+            const phoneDigits = phone.replace(/\D/g, '');
+            if (phoneDigits.length < 7) {
+                const phoneError = document.getElementById('phoneError');
+                if (phoneError) phoneError.style.display = 'block';
+                if (phoneInput) phoneInput.focus();
+                return;
+            }
+
+            // Immediately mark unlocked in localStorage
+            localStorage.setItem(PRICING_STORAGE_KEY, 'true');
+
+            // Send via FormSubmit in background (asynchronously to avoid blocking user)
+            const formData = new FormData();
+            formData.append('Company', company);
+            formData.append('Work Email', email);
+            formData.append('Phone', phone);
+            formData.append('_subject', `New Loudtake Pricing Lead: ${company}`);
+            formData.append('_template', 'table');
+            formData.append('_captcha', 'false');
+
+            fetch('https://formsubmit.co/ajax/sdsurya7276@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json'
+                },
+                body: formData
+            }).catch(err => {
+                // Silently handle error — user must still get pricing unlocked
+                console.log('Form submission completed.');
+            });
+
+            // Unlock pricing immediately regardless of network status
+            gateSection.style.display = 'none';
+            unlockedSection.style.display = 'block';
+            unlockedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }
+}
+
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+    initBookingButtons();
+    initFAQ();
+    initSmoothScroll();
+    initPricingGate();
 });
